@@ -1,8 +1,10 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
-import * as S from './styled'
+import Link from 'next/link'
+
 import useNav from '@/hooks/useNav'
-import Buttons from '@/components/Buttons'
+
+import * as S from './styled'
 
 interface Props {
   title: string
@@ -22,7 +24,12 @@ export default function Main({ title, text, image }: Props) {
         </Head>
         <S.Title>{title}</S.Title>
         <S.Text isHome={isHome}>{text}</S.Text>
-        {isHome && <Buttons />}
+        {isHome && (
+          <S.Buttons>
+            <Link href="/pessoa-usuaria">Pessoa Usuária</Link>
+            <Link href="/profissional">Profissional</Link>
+          </S.Buttons>
+        )}
       </div>
       {image}
     </S.Main>
