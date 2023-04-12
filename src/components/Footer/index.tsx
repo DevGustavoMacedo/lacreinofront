@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 import * as S from './styled'
+
 import useNav from '@/hooks/useNav'
 
-import Paragraph from '@/components/Paragraph'
 import IconsList from '@/components/IconsList'
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
       <S.Icons>
         <IconsList />
       </S.Icons>
-      <Paragraph />
+      <p>Desafio Front-end Lacrei</p>
     </S.Footer>
   )
 }
