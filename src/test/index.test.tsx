@@ -1,14 +1,25 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 
-import Paragraph from '@/components/Paragraph'
 import IconsList from '@/components/IconsList'
 
 describe('Components', () => {
-  it('should have right text', () => {
-    const { getByText } = render(<Paragraph />)
+  it('should have 3 icons', () => {
+    const { getAllByRole } = render(<IconsList />)
 
-    expect(getByText('Desafio Front-end Lacrei'))
+    expect(getAllByRole('img').length).toEqual(3)
+  })
+
+  it('images should have right alt', () => {
+    render(<IconsList />)
+
+    const images: HTMLImageElement[] = screen.getAllByRole('img')
+
+    expect(images.map((image) => image.alt)).toEqual([
+      'Instagram',
+      'Facebook',
+      'Linkedin',
+    ])
   })
 
   it('should have 3 links', () => {
@@ -17,18 +28,12 @@ describe('Components', () => {
     expect(getAllByRole('link').length).toEqual(3)
   })
 
-  it('should have 3 icons', () => {
-    const { getAllByRole } = render(<IconsList />)
-
-    expect(getAllByRole('img').length).toEqual(3)
-  })
-
-  it('has right links', () => {
+  it('links should have right href', () => {
     render(<IconsList />)
 
-    const image: HTMLAnchorElement[] = screen.getAllByRole('link')
+    const links: HTMLAnchorElement[] = screen.getAllByRole('link')
 
-    expect(image.map((item) => item.href)).toEqual([
+    expect(links.map((item) => item.href)).toEqual([
       'https://www.instagram.com/lacrei.saude/',
       'https://www.facebook.com/lacrei.saude',
       'https://www.linkedin.com/company/lacrei',
