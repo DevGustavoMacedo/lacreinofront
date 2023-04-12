@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="Challenge frontend" />
           <meta
             name="image"
-            content="https://raw.githubusercontent.com/DevGustavoMacedo/devgustavomacedo/main/public/lacreinofront.webp"
+            content="https://raw.githubusercontent.com/DevGustavoMacedo/lacreinofront/main/public/github/desktop-light.webp"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
