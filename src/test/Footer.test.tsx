@@ -1,17 +1,17 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 
-import IconsList from '@/components/IconsList'
+import Footer from './Footer'
 
 describe('Components', () => {
   it('should have 3 icons', () => {
-    const { getAllByRole } = render(<IconsList />)
+    const { getAllByRole } = render(<Footer />)
 
     expect(getAllByRole('img').length).toEqual(3)
   })
 
   it('images should have right alt', () => {
-    render(<IconsList />)
+    render(<Footer />)
 
     const images: HTMLImageElement[] = screen.getAllByRole('img')
 
@@ -23,13 +23,13 @@ describe('Components', () => {
   })
 
   it('should have 3 links', () => {
-    const { getAllByRole } = render(<IconsList />)
+    const { getAllByRole } = render(<Footer />)
 
     expect(getAllByRole('link').length).toEqual(3)
   })
 
   it('links should have right href', () => {
-    render(<IconsList />)
+    render(<Footer />)
 
     const links: HTMLAnchorElement[] = screen.getAllByRole('link')
 
