@@ -2,6 +2,8 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { AppProps } from 'next/app'
 import { FC, useState } from 'react'
 import Image from 'next/image'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const lightTheme = {
   colors: {
@@ -81,7 +83,9 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
             alt={isDarkMode ? 'Modo Claro' : 'Modo Escuro'}
           />
         </Toggle>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   )
