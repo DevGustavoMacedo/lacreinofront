@@ -3,7 +3,8 @@ import Link from 'next/link'
 import * as S from './styled'
 
 import useNav from '@/hooks/useNav'
-import Image from 'next/image'
+
+import IconsList from '@/components/IconsList'
 
 export default function Footer() {
   const { pathname, navigation } = useNav()
@@ -18,42 +19,7 @@ export default function Footer() {
         ))}
       </S.Nav>
       <S.Icons>
-        <a
-          href="https://www.instagram.com/lacrei.saude/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            src="/icons/instagram.svg"
-            width={32}
-            height={32}
-            alt="Instagram"
-          />
-        </a>
-        <a
-          href="https://www.facebook.com/lacrei.saude"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            src="/icons/facebook.svg"
-            width={32}
-            height={32}
-            alt="Facebook"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/lacrei"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            src="/icons/linkedin.svg"
-            width={32}
-            height={32}
-            alt="Linkedin"
-          />
-        </a>
+        <IconsList />
       </S.Icons>
       <p>Desafio Front-end Lacrei</p>
     </S.Footer>

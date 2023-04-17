@@ -1,6 +1,6 @@
-/* eslint-disable */
+import Image from 'next/image'
 
-export default function Footer() {
+export default function IconsList() {
   return (
     <>
       <a
@@ -8,7 +8,7 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <img
+        <Image
           src="/icons/instagram.svg"
           width={32}
           height={32}
@@ -20,14 +20,24 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/icons/facebook.svg" width={32} height={32} alt="Facebook" />
+        <Image
+          src="/icons/facebook.svg"
+          width={32}
+          height={32}
+          alt="Facebook"
+        />
       </a>
       <a
         href="https://www.linkedin.com/company/lacrei"
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/icons/linkedin.svg" width={32} height={32} alt="Linkedin" />
+        <Image
+          src="/icons/linkedin.svg"
+          width={32}
+          height={32}
+          alt="Linkedin"
+        />
       </a>
     </>
   )
